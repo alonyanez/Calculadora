@@ -11,6 +11,7 @@ import javax.swing.JPanel;
 
 import us.lsi.common.Files2;
 
+import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -90,7 +91,7 @@ public class Contardor extends JFrame{
 	    
 	    //Creación del panel
 	    JPanel panel = new JPanel();
-	    
+
 	    //Creación de las etiquetas
 	    label1 = new JLabel();
 	    label2 = new JLabel();
@@ -105,25 +106,52 @@ public class Contardor extends JFrame{
 	    label4.setText("Valor y");
 	    label5.setText("Logaritmo");
 	    
-	    label1.setBounds(10,20,200,30);
 	    
+	    //Para ajustar los botones
+	    button0.setLayout(null); button1.setLayout(null); button2.setLayout(null);
+	    button3.setLayout(null); button4.setLayout(null); button5.setLayout(null);
+	    button6.setLayout(null); button7.setLayout(null); button9.setLayout(null);
+	    b1.setLayout(null); b2.setLayout(null); b3.setLayout(null); b4.setLayout(null);
+	    b5.setLayout(null); b6.setLayout(null); b7.setLayout(null); b8.setLayout(null);
+	    b9.setLayout(null);
+	    
+	    //Para ajustar los textos
+	    label1.setLayout(null); label2.setLayout(null); label3.setLayout(null);
+	    label4.setLayout(null);
+
 	    //Se añaden los componentes al panel
-	    panel.add(button0);
-	    panel.add(button1); panel.add(button2); panel.add(button3);
-	    panel.add(button4); panel.add(button5); panel.add(button6);
-	    panel.add(button7); panel.add(button8); panel.add(button9);
-	    panel.add(b1); panel.add(b2); panel.add(b5); panel.add(b6); 
-	    panel.add(b7); panel.add(b8); panel.add(b9); panel.add(b3); 
-	    panel.add(b4);
-	    panel.add(label3); panel.add(label1);
-	    panel.add(label4); panel.add(label2);
+	    panel.add(button0); add(button0); panel.add(button1); add(button1); 
+	    panel.add(button2); add(button2); panel.add(button3); add(button3);
+	    panel.add(button4); add(button4); panel.add(button5); add(button5);
+	    panel.add(button6); add(button6); panel.add(button7); add(button7);
+	    panel.add(button8); add(button8); panel.add(button9); add(button9);
+	    panel.add(b1); add(b1); panel.add(b2); add(b2); panel.add(b5); add(b5);
+	    panel.add(b6); add(b6); panel.add(b7); add(b7); panel.add(b8); add(b8);
+	    panel.add(b9); add(b9); panel.add(b3); add(b3); panel.add(b4); add(b4);
+	    panel.add(label3); add(label3); panel.add(label1); add(label1);
+	    panel.add(label4); add(label4); panel.add(label2); add(label2);
 	    //panel.add(label5);
 	    
 	    this.getContentPane().add(panel);
 	    setVisible(true);
 	    setDefaultCloseOperation(EXIT_ON_CLOSE);
 	    
+	    //Para terminar de ajustar la posición de los componentes
 	    
+	    button0.setBounds(65, 250, 45, 20); b3.setBounds(115, 250, 45, 20); b4.setBounds(165, 250, 95, 20);
+	    button1.setBounds(65, 225, 45, 20); button2.setBounds(115, 225, 45, 20); button3.setBounds(165, 225, 45, 20); 
+	    button4.setBounds(65, 200, 45, 20); button5.setBounds(115, 200, 45, 20); button6.setBounds(165, 200, 45, 20);
+	    button7.setBounds(65, 175, 45, 20); button8.setBounds(115, 175, 45, 20); button9.setBounds(165, 175, 45, 20);
+	    
+	    b1.setBounds(215, 225, 45, 20); b2.setBounds(265, 225, 45, 20);
+	    b5.setBounds(215, 200, 45, 20); b6.setBounds(265, 200, 45, 20);
+	    b7.setBounds(215, 175, 45, 20); 
+	    b8.setBounds(65, 150, 95, 20); b9.setBounds(165, 150, 95, 20);
+	    
+	    label3.setBounds(45, 50, 80, 45); label1.setBounds(145, 50, 95, 45); label4.setBounds(225, 50, 95, 45);
+	    label2.setBounds(45, 95, 80, 45);
+	    
+//------------------------------------------------------------------------------------------------------------------------------//    
 	    b1.addActionListener(new ActionListener() { 
 	          public void actionPerformed(ActionEvent e) {
 	        	  	 v = "+";
